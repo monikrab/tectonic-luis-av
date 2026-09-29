@@ -1,1 +1,1 @@
-<h1 align="center">Tutorial LaTeX com Tectonic</h1>
+<h1 align="center">Tutorial de LaTeX com Tectonic</h1>
