@@ -1,0 +1,9 @@
+
+EXPLICAÇÃO TÉCNICA DA COMPILAÇÃO COM TECTONIC -- FÍSICA 12º ANO
+===============================================================
+
+wget https://sourceforge.net/projects/biblatex/files/biblatex-3.21/biblatex-3.21.tgz
+tar xf biblatex-3.21.tgz
+mkdir -p auxiliares/biblatex/
+cp -r biblatex/latex/* auxiliares/biblatex/
+rm -r biblatex-3.21.tgz biblatex
