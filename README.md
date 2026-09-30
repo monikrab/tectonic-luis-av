@@ -4,9 +4,11 @@
 
 #### 1. Exemplo
 
-O professor deve ter te enviado um relatório de exemplo com um relatório escrito em LaTeX, contudo, não o conseguirás compilar imediatamente com o Tectonic, devido a umas incompatibilidades com o preâmbulo do professor (o ficheiro que contém as definições de compilação do LaTeX). Por isso, terás de usar a minha versão do exemplo.
+O professor deve ter te enviado uns ficheiros de exemplo de um relatório escrito em LaTeX, contudo, não o conseguirás compilar imediatamente com o Tectonic, devido a umas incompatibilidades com o preâmbulo do professor (o ficheiro que contém as definições de compilação do LaTeX). Por isso, terás de usar a minha versão do exemplo.
 
-Primeiro, instala o `git` no teu computador. O Git é um software que faz gestão de versões de software, que nos ajuda a evitar guardar ficheiros como `ficheiro`, `ficheiro-melhorado`, `ficheiro-final`, `ficheiro-final-melhorado`, ... No Linux (Manjaro ou CachyOS), abre o terminal e executa:
+Primeiro, instala o `git` no teu computador. O Git é um software que faz gestão de versões de software, que nos ajuda a evitar guardar ficheiros como `ficheiro` > `ficheiro-melhorado` > `ficheiro-final` > `ficheiro-final-melhorado`, ...
+
+Se estiveres no Linux (Manjaro ou CachyOS), abre o terminal e executa:
 
 ```bash
 sudo pacman -S git
@@ -24,7 +26,8 @@ git clone https://github.com/monikrab/tectonic-luis-av
 
 
 
-## CONFLITOS DO PREÂMBULO COM O TECTONIC (para o professor)
+## Para o professor
+## CONFLITOS DO PREÂMBULO COM O TECTONIC
 
 O Tectonic não instala fontes, apenas usa ficheiros locais. É preverível copiar a fonte para a diretoria dos auxiliares.
 No preâmbulo, altere o comando `\setmainfont` de modo a incluir:
@@ -41,7 +44,7 @@ No preâmbulo, altere o comando `\setmainfont` de modo a incluir:
   ...
 ```
 
-Para o Biber funcionar, tem de estar instalado localmente. Contudo, o Tectonic só encontra o BibLaTeX se a sua localização for especificada à hora da compilação. Use a opção `-Z search-path=auxiliares/biblatex/` quando for compilar.
+Para o Biber funcionar, tem de estar instalado localmente. Contudo, o Tectonic tem conflitos de versão com o BibLaTeX do Arch. Isto pode ser aliviado se a sua localização for especificada à hora da compilação. Use a opção `-Z search-path=auxiliares/biblatex/` quando for compilar.
 **AVISO:** não funciona com o BibLaTeX 3.22, pois o Tectonic ainda usa o TeX Live 2025. Use a versão 3.21 do SourceForge (presente nas pastas demo/ e auxilares/).
 
 A opção `german` não funciona no comando `\setotherlanguages{}`. `ngerman` também não funciona.
