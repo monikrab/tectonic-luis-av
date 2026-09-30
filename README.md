@@ -27,7 +27,7 @@ git clone https://github.com/monikrab/tectonic-luis-av
 
 
 ## Para o professor
-## CONFLITOS DO PREÂMBULO COM O TECTONIC
+### CONFLITOS DO PREÂMBULO COM O TECTONIC
 
 O Tectonic não instala fontes, apenas usa ficheiros locais. É preverível copiar a fonte para a diretoria dos auxiliares.
 No preâmbulo, altere o comando `\setmainfont` de modo a incluir:
