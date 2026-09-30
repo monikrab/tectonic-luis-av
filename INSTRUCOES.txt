@@ -5,8 +5,8 @@ MANUAL DE LaTeX USANDO O TECTONIC -- FÍSICA 12º ANO
 1º PASSO
 --------
 
-Tendo o relatório escrito em LaTeX (.tex), verifique que tem:
-- Bibliografia (bibliografia.bib) na mesma pasta que o relatório
+Tendo o relatório escrito em LaTeX (num ficheiro .tex), verifique que tem, na mesma pasta em que o relatório:
+- Bibliografia (bibliografia.bib)
 - Pasta 'logos'
 - Pasta 'auxiliares' que contém:
   -> Pasta 'biblatex' com os seus ficheiros
@@ -22,7 +22,8 @@ Se tudo estiver correto, pode prosseguir à compilação do relatório. No termi
 
 python make.py [nome do ficheiro do relatório]
 
-É possível não ter de especificar o nome do relatório. Se o nome do ficheiro começar por 'desafio' e acabar em '.tex', será automaticamente selecionado.
+Se não quiser repetir o nome do relatório, mude o nome do ficheiro para começar com 'desafio' e acabar em '.tex', será automaticamente selecionado.
+
 Também é possível não ter de escrever 'python' repetidamente. Se estiver no Linux ou macOS, execute:
 
 chmod +x make.py
@@ -31,4 +32,4 @@ Apartir de então, poderá compilar executando apenas
 
 ./make.py
 
-Se o relatório tiver o nome apropriado, também é possível executar o ficheiro make.py a partir do explorador de ficheiros.
+Se o relatório tiver o nome 'desafio' ... '.tex', também é possível executar o ficheiro make.py a partir do explorador de ficheiros.

@@ -2,7 +2,6 @@
 SETUP DA COMPILAÇÃO COM TECTONIC -- FÍSICA 12º ANO
 ==================================================
 
-
 Instale o Tectonic. Numa distribuição Arch Linux:
 
 sudo pacman -S tectonic
