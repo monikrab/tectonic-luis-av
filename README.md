@@ -69,6 +69,9 @@ Para exemplificar um documento básico em LaTeX com tudo isto:
     $$
         f(x) = \int_{-\infty}^{\infty} \left( \sum_{n=1}^{\infty} \frac{\alpha_n}{n^2} \right) e^{-\frac{(x-\mu)^2}{2\sigma^2}} \, dx
     $$
+    $
+        f(x) = \int_{-\infty}^{\infty} \left( \sum_{n=1}^{\infty} \frac{\alpha_n}{n^2} \right) e^{-\frac{(x-\mu)^2}{2\sigma^2}} \, dx
+    $
 
     \item \textbf{Referências automáticas:} Faz gestão automática de figuras e bibliografia. Podemos citar um livro: \cite{knuth1984}. % Adiciona uma referência
 \end{itemize}
