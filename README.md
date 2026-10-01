@@ -5,7 +5,7 @@
 
 ### 0. Fundamentos
 
-O professor está a mandar-te instalar um software de que provavelmente nunca ouviste falar, chamado \LaTeX. Porquê?
+O professor está a mandar-te instalar um software de que provavelmente nunca ouviste falar, chamado $\LaTeX$. Porquê?
 
 
 Depois disto, abre um terminal, executa o comando `cd [pasta]` para entrares na pasta em que queres guardar o exemplo (por ex.: "Downloads") e executa
