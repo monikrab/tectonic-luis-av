@@ -73,7 +73,7 @@ Para exemplificar um documento básico em LaTeX com tudo isto:
         f(x) = \int_{-\infty}^{\infty} \left( \sum_{n=1}^{\infty} \frac{\alpha_n}{n^2} \right) e^{-\frac{(x-\mu)^2}{2\sigma^2}} \, dx
     $
 
-    \item \textbf{Referências automáticas:} Faz gestão automática de figuras e bibliografia. Podemos citar um livro: \cite{knuth1984}. % Adiciona uma referência
+    \item \textbf{Referências automáticas}: Faz gestão automática de figuras e bibliografia. Podemos citar um livro: \cite{knuth1984}. % Adiciona uma referência
 \end{itemize}
 
 
@@ -91,7 +91,7 @@ Isto resulta no seguinte documento (print cortada, o resultado final é em taman
 
 ### 2. Está bem, convenceste-me. Como é que instalo isto?
 
-Depende. **Se estiveres no Linux** (que, já agora, eu <u>recomendo</u> usares), abre o teu terminal e executa o comando
+Depende. **Se estiveres no Linux** (que, já agora, eu <u>recomendo usares</u> se estiveres disposto a fazer um pequeno esforço), abre o teu terminal e executa o comando
 
 ```bash
 sudo pacman -S tectonic biber
@@ -99,7 +99,15 @@ sudo pacman -S tectonic biber
 
 *Quem não tem familiaridade com o uso da linha de comandos, pode começar por ler este pequeno guia: <https://promovaweb.com/glossario/cli>, e outros do mesmo site*
 
-Este comando instalará o Tectonic, a nossa *engine* (motor) e *distribuição* de LaTeX. Uma engine é o programa que contém o sistema básico de LaTeX, usado para compilar o teu texto. A distribuição é o pacote completo que gere e instala todas as ferramentas e adicionais (bibliotecas, fontes) especificados em cada documento.
+Este comando instalará o Tectonic, a nossa *engine* (motor) e *distribuição* de LaTeX. Uma engine é o programa que contém o sistema básico de LaTeX, usado para compilar o teu texto. A distribuição é o pacote completo que gere e instala todas as ferramentas e adicionais (bibliotecas, fontes) especificados em cada documento. Também instala o Biber, que age juntamente com o BibLaTeX para criar a bibliografia.
+
+**Se estiveres no Windows**, abre o PowerShell, e cola e executa o seguinte comando:
+
+```pwsh
+md "C:\Tectonic" -f; [Environment]::SetEnvironmentVariable("Path", "$([Environment]::GetEnvironmentVariable("Path","User"));C:\Tectonic", "User")
+```
+
+Agora, vai ao site <https://tectonic-typesetting.github.io/latest.html>, e, na lista no fundo da página, clicka no título 'tectonic...windows-msvc.zip". Será transferido um arquivo `.zip`, que deverás extrair (com o botão direito no ficheiro no Explorador, clicka em 'Extrair Tudo'), e gravar o resultante `tectonic.exe` na pasta `C:\Tectonic`.
 
 
 <br>
