@@ -5,7 +5,13 @@
 
 ### 0. Fundamentos
 
-O professor está a mandar-te instalar um software de que provavelmente nunca ouviste falar, chamado $\LaTeX$. Porquê?
+Para conseguries escrever relatórios para os teus trabalhos, o professor está a mandar-te instalar um software de que provavelmente nunca ouviste falar, chamado Latex (estilizado como LaTeX), porquê? *Não posso só usar o Word ou o Google Docs para escrever os meus relatórios?*
+
+Teoricamente... podes, contudo, isto não é tão boa ideia como podes imaginar. Este slide explica a diferença entre os dois softwares bastante bem:
+
+<p align="center">
+  <img src="imagens/word_vs_latex.png" width="600">
+</p>
 
 
 Depois disto, abre um terminal, executa o comando `cd [pasta]` para entrares na pasta em que queres guardar o exemplo (por ex.: "Downloads") e executa
