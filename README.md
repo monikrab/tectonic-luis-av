@@ -1,5 +1,6 @@
+
 <h1 align="center">Tutorial de LaTeX com Tectonic</h1>
-<h1 align="center">Física — 12º Ano</h1>
+<h2 align="center">Física — 12º Ano</h2>
 
 
 #### 1. Exemplo
@@ -14,7 +15,7 @@ Se estiveres no Linux (Manjaro ou CachyOS), abre o terminal e executa:
 sudo pacman -S git
 ```
 
-No Windows, abre este site: <https://github.com/git-for-windows/git/releases/download/v2.56.0.windows.1/Git-2.56.0-64-bit.exe>. Deve começar a instalar um ficheiro .exe, que deves executar, seguindo as suas instruções. Garante que não desmarcas a opção de adicionar o Git à variável de ambiente PATH (estará ligada por defeito).
+No Windows, abre este site: <https://github.com/git-for-windows/git/releases/download/v2.56.0.windows.1/Git-2.56.0-64-bit.exe>. Deve começar a instalar um ficheiro .exe, que deves executar, seguindo as suas instruções. Garante que não desmarcas a opção de adicionar o Git à variável de ambiente PATH (estará ligada por defeito).1
 
 Depois disto, abre um terminal, executa o comando `cd [pasta]` para entrares na pasta em que queres guardar o exemplo (por ex.: "Downloads") e executa
 
