@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
-# |
-# `- Usando esta instrução na primeira linha do ficheiro, o Linux executa o ficheiro
-#    automaticamente, usando o Python. No Linux, usa 'chmod +x make.py' para fazê-lo
-#    executável, e usa './make.py' para o correr.
+#  |
+#  `- Usando esta instrução na primeira linha do ficheiro, o Linux executa-o
+#     automaticamente, usando o Python. No Linux, usa 'chmod +x make.py' para
+#     fazê-lo executável, e usa './make.py' para o correr.
 
 
 # Bibliotecas que o script precisa para funcionar (sempre presentes na biblioteca
@@ -33,4 +33,4 @@ escrever_logs = "--keep-logs" if "logs" in sys.argv else ""
 #   |            |                              |  
 #   `- Comando   `- Subcomando (compilar)       `- Onde encontrar o BibLaTeX (faz a bibliografia)
 #
-os.system(f"tectonic -X compile {target} -Z search-path=auxiliares/biblatex/ {keep_logs}")
+os.system(f"tectonic -X compile {nome_do_ficheiro} -Z search-path=auxiliares/biblatex/ {escrever_logs}")

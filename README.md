@@ -16,7 +16,7 @@ Teoricamente... podes. Contudo, isto não é tão boa ideia como podes imaginar.
 Se fosses fazer os relatórios com um processador de texto normal, provavelmente demorarias bastante mais tempo, e ficaria menos visualmente apelativo.  
 
 
-#### Que faz o LaTeX? Como posso fazer um documento?
+### 1. Que faz o LaTeX? Como posso fazer um documento?
 
 O LaTeX é um software de composição tipográfica de documentos, que funciona à base de código. Escreverás o texto com comandos de formatação num ficheiro `.tex`, e depois compilarás para um PDF de alta qualidade. O funcionamento do LaTeX pode ser dividido em três partes:
 
@@ -26,6 +26,58 @@ O LaTeX é um software de composição tipográfica de documentos, que funciona 
 
 - Referências automáticas: Faz gestão automática de figuras e bibliografia.
 
+Para exemplificar um documento básico em LaTeX com tudo isto:
+
+```latex
+% O simbolo de por cento serve como comentário.
+% Tudo à frente deste não é visto pelo compilador
+
+\documentclass{article} % Tipo de documento (neste caso, artigo científico)
+
+% Carrega o BibLaTeX, que gere a bibliografia
+\usepackage[backend=biber,style=numeric]{biblatex}
+% Usa o ficheiro de referências bibliografia.bib
+\addbibresource{bibliografia.bib}
+
+% Seleciona a língua portuguesa
+\usepackage[portuguese]{babel}
+
+% Exemplo de formatação: pôr o fundo negro e o texto branco
+\usepackage{xcolor}
+\pagecolor{black}
+\color{white}
+
+% Tudo atrás deste comando é referido como "preâmbulo"
+\begin{document}
+
+
+% Secção do documento
+\section{Vantagens do \LaTeX}
+
+% Lista
+\begin{itemize}
+    % Item da lista
+    \item \textbf{Separação de conteúdo e formatação}: Concentras-te apenas no que estás a escrever (parágrafos, fórmulas, etc.), enquanto o sistema cuida automaticamente da tipografia, espaçamentos, paginação.
+
+    \item \textbf{Fórmulas matemáticas}: É a ferramenta padrão para escrever equações matemáticas complexas claramente formatas em qualidade. Por exemplo:
+
+    % Fórmula
+    % Os cifrões ($$) denota o início e fim da equação.
+
+    % Um cifrão ($) faz o mesmo, mas comprime
+    % a equação para caber na altura duma linha
+    $$
+        f(x) = \int_{-\infty}^{\infty} \left( \sum_{n=1}^{\infty} \frac{\alpha_n}{n^2} \right) e^{-\frac{(x-\mu)^2}{2\sigma^2}} \, dx
+    $$
+
+    \item \textbf{Referências automáticas:} Faz gestão automática de figuras e bibliografia. Podemos citar um livro: \cite{knuth1984}. % Adiciona uma referência
+\end{itemize}
+
+
+
+\printbibliography
+\end{document}
+```
 
 
 
