@@ -93,7 +93,7 @@ Isto resulta no seguinte documento (print cortada, o resultado final é em taman
 
 Depende. **Se estiveres no Linux** (que, já agora, eu <u>recomendo usares</u> se estiveres disposto a fazer um pequeno esforço), abre o teu terminal e executa o comando
 
-```bash
+```shell
 sudo pacman -S tectonic biber
 ```
 
@@ -103,7 +103,7 @@ Este comando instalará o Tectonic, a nossa *engine* (motor) e *distribuição* 
 
 **Se estiveres no Windows**, abre o PowerShell, e cola e executa o seguinte comando:
 
-```pwsh
+```shell
 md "C:\Tectonic" -f; [Environment]::SetEnvironmentVariable("Path", "$([Environment]::GetEnvironmentVariable("Path","User"));C:\Tectonic", "User")
 ```
 
