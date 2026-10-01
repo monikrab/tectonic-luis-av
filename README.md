@@ -63,7 +63,6 @@ Para exemplificar um documento básico em LaTeX com tudo isto:
 
     % Fórmula
     % Os cifrões ($$) denota o início e fim da equação.
-
     $$
         f(x) = \int_{-\infty}^{\infty} \left( \sum_{n=1}^{\infty} \frac{\alpha_n}{n^2} \right) e^{-\frac{(x-\mu)^2}{2\sigma^2}} \, dx
     $$
@@ -86,11 +85,21 @@ Para exemplificar um documento básico em LaTeX com tudo isto:
 Isto resulta no seguinte documento (print cortada, o resultado final é em tamanho A4):
 
 <p align="center">
-  <img src="imagens/demo_latex.png" width="600">
+  <img src="imagens/demo_latex.png" width="750">
 </p>
 
 
+### 2. Está bem, convenceste-me. Como é que instalo isto?
 
+Depende. **Se estiveres no Linux** (que, já agora, eu <u>recomendo</u> usares), abre o teu terminal e executa o comando
+
+```bash
+sudo pacman -S tectonic biber
+```
+
+*Quem não tem familiaridade com o uso da linha de comandos, pode começar por ler este pequeno guia: <https://promovaweb.com/glossario/cli>, e outros do mesmo site*
+
+Este comando instalará o Tectonic, a nossa *engine* (motor) e *distribuição* de LaTeX. Uma engine é o programa que contém o sistema básico de LaTeX, usado para compilar o teu texto. A distribuição é o pacote completo que gere e instala todas as ferramentas e adicionais (bibliotecas, fontes) especificados em cada documento.
 
 
 <br>
