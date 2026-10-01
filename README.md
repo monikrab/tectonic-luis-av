@@ -5,20 +5,29 @@
 
 ### 0. Fundamentos
 
-Para conseguries escrever relatórios para os teus trabalhos, o professor está a mandar-te instalar um software de que provavelmente nunca ouviste falar, chamado Latex (estilizado como LaTeX), porquê? *Não posso só usar o Word ou o Google Docs para escrever os meus relatórios?*
+Para conseguries escrever relatórios sobre os teus trabalhos, o professor está a mandar-te instalar um software de que provavelmente nunca ouviste falar, chamado Latex (estilizado como LaTeX, lê-se 'latek', o X é um χ grego maiúsculo), porquê? *Não posso só usar o Word ou o Google Docs para escrever os meus relatórios?*
 
-Teoricamente... podes, contudo, isto não é tão boa ideia como podes imaginar. Este slide explica a diferença entre os dois softwares bastante bem:
+Teoricamente... podes. Contudo, isto não é tão boa ideia como podes imaginar. Este slide explica a diferença entre os dois softwares bastante bem:
 
 <p align="center">
-  <img src="imagens/word_vs_latex.png" width="600">
+  <img src="imagens/word_vs_latex.png" width="750">
 </p>
 
+Se fosses fazer os relatórios com um processador de texto normal, provavelmente demorarias bastante mais tempo, e ficaria menos visualmente apelativo.  
 
-Depois disto, abre um terminal, executa o comando `cd [pasta]` para entrares na pasta em que queres guardar o exemplo (por ex.: "Downloads") e executa
 
-```bash
-git clone https://github.com/monikrab/tectonic-luis-av 
-```
+#### Que faz o LaTeX? Como posso fazer um documento?
+
+O LaTeX é um software de composição tipográfica de documentos, que funciona à base de código. Escreverás o texto com comandos de formatação num ficheiro `.tex`, e depois compilarás para um PDF de alta qualidade. O funcionamento do LaTeX pode ser dividido em três partes:
+
+- Separação de conteúdo e formatação: Concentras-te apenas no que estás a escrever (parágrafos, fórmulas, etc.), enquanto o sistema cuida automaticamente da tipografia, espaçamentos, paginação.
+
+- Fórmulas matemáticas: É a ferramenta padrão para escrever equações matemáticas complexas claramente formatas em qualidade.
+
+- Referências automáticas: Faz gestão automática de figuras e bibliografia.
+
+
+
 
 
 
