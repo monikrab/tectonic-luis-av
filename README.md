@@ -77,18 +77,17 @@ Para exemplificar um documento básico em LaTeX com tudo isto:
     \item \textbf{Referências automáticas:} Faz gestão automática de figuras e bibliografia. Podemos citar um livro: \cite{knuth1984}. % Adiciona uma referência
 \end{itemize}
 
-Isto resulta no seguinte documento (cortado, o resultado final é em tamanho A4):
-
-<p align="center">
-  <img src="imagens/demo_latex.png" width="600">
-</p>
-
 
 
 \printbibliography
 \end{document}
 ```
 
+Isto resulta no seguinte documento (print cortada, o resultado final é em tamanho A4):
+
+<p align="center">
+  <img src="imagens/demo_latex.png" width="600">
+</p>
 
 
 
