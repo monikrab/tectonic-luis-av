@@ -3,7 +3,7 @@
 <h2 align="center">Física — 12º Ano</h2>
 
 
-#### 1. Exemplo
+### 0. Fundamentos
 
 O professor deve ter te enviado uns ficheiros de exemplo de um relatório escrito em LaTeX, contudo, não o conseguirás compilar imediatamente com o Tectonic, devido a umas incompatibilidades com o preâmbulo do professor (o ficheiro que contém as definições de compilação do LaTeX). Por isso, terás de usar a minha versão do exemplo.
 
@@ -26,8 +26,9 @@ git clone https://github.com/monikrab/tectonic-luis-av
 
 
 
-
-## Para o professor
+<br>
+<br>
+<h2 align="center">Para o professor</h2>
 ### CONFLITOS DO PREÂMBULO COM O TECTONIC
 
 O Tectonic não instala fontes, apenas usa ficheiros locais. É preverível copiar a fonte para a diretoria dos auxiliares.
