@@ -64,17 +64,24 @@ Para exemplificar um documento básico em LaTeX com tudo isto:
     % Fórmula
     % Os cifrões ($$) denota o início e fim da equação.
 
-    % Um cifrão ($) faz o mesmo, mas comprime
-    % a equação para caber na altura duma linha
     $$
         f(x) = \int_{-\infty}^{\infty} \left( \sum_{n=1}^{\infty} \frac{\alpha_n}{n^2} \right) e^{-\frac{(x-\mu)^2}{2\sigma^2}} \, dx
     $$
+
+    % Um cifrão ($) faz o mesmo, mas comprime
+    % a equação para caber na altura duma linha
     $
         f(x) = \int_{-\infty}^{\infty} \left( \sum_{n=1}^{\infty} \frac{\alpha_n}{n^2} \right) e^{-\frac{(x-\mu)^2}{2\sigma^2}} \, dx
     $
 
     \item \textbf{Referências automáticas:} Faz gestão automática de figuras e bibliografia. Podemos citar um livro: \cite{knuth1984}. % Adiciona uma referência
 \end{itemize}
+
+Isto resulta no seguinte documento (cortado, o resultado final é em tamanho A4):
+
+<p align="center">
+  <img src="imagens/demo_latex.png" width="600">
+</p>
 
 
 
