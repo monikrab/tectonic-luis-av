@@ -5,17 +5,8 @@
 
 ### 0. Fundamentos
 
-O professor deve ter te enviado uns ficheiros de exemplo de um relatório escrito em LaTeX, contudo, não o conseguirás compilar imediatamente com o Tectonic, devido a umas incompatibilidades com o preâmbulo do professor (o ficheiro que contém as definições de compilação do LaTeX). Por isso, terás de usar a minha versão do exemplo.
+O professor está a mandar-te instalar um software de que provavelmente nunca ouviste falar, chamado \LaTeX. Porquê?
 
-Primeiro, instala o `git` no teu computador. O Git é um software que faz gestão de versões de software, que nos ajuda a evitar guardar ficheiros como `ficheiro` > `ficheiro-melhorado` > `ficheiro-final` > `ficheiro-final-melhorado`, ...
-
-Se estiveres no Linux (Manjaro ou CachyOS), abre o terminal e executa:
-
-```bash
-sudo pacman -S git
-```
-
-No Windows, abre este site: <https://github.com/git-for-windows/git/releases/download/v2.56.0.windows.1/Git-2.56.0-64-bit.exe>. Deve começar a instalar um ficheiro .exe, que deves executar, seguindo as suas instruções. Garante que não desmarcas a opção de adicionar o Git à variável de ambiente PATH (estará ligada por defeito).1
 
 Depois disto, abre um terminal, executa o comando `cd [pasta]` para entrares na pasta em que queres guardar o exemplo (por ex.: "Downloads") e executa
 
@@ -29,6 +20,7 @@ git clone https://github.com/monikrab/tectonic-luis-av
 <br>
 <br>
 <h2 align="center">Para o professor</h2>
+
 ### CONFLITOS DO PREÂMBULO COM O TECTONIC
 
 O Tectonic não instala fontes, apenas usa ficheiros locais. É preverível copiar a fonte para a diretoria dos auxiliares.
