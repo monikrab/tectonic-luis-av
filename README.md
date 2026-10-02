@@ -5,47 +5,57 @@
 
 ### 0. Fundamentos
 
-Para conseguries escrever relatórios sobre os teus trabalhos, o professor está a mandar-te instalar um software de que provavelmente nunca ouviste falar, chamado Latex (estilizado como LaTeX, lê-se 'latek', o X é um χ grego maiúsculo), porquê? *Não posso só usar o Word ou o Google Docs para escrever os meus relatórios?*
+Para conseguries escrever relatórios sobre os trabalhos que farás na disciplina, o professor está a mandar-te instalar uma coisa de que provavelmente nunca ouviste falar, chamado Latex (estilizado como LaTeX; lê-se 'lateq', porque o X é um χ (qui) grego)—porquê? *Não posso só escrever os meus relatórios no o Word ou no Google Docs?*
 
-Teoricamente... podes. Contudo, isto não é tão boa ideia como podes imaginar. Este slide explica a diferença entre os dois softwares bastante bem:
+Teoricamente... podes. Contudo, isto não é tão boa ideia como poderás imaginar. Esta imagem explica a diferença entre estes dois tipos de aplicações bastante bem:
 
-<p align="center">
-  <img src="imagens/word_vs_latex.png" width="750">
-</p>
+<p align="center"><img src="imagens/word_vs_latex.png" width="750"></p>
 
-Se fosses fazer os relatórios com um processador de texto normal, provavelmente demorarias bastante mais tempo, e ficaria menos visualmente apelativo.  
+Ou seja, se tentasses escrever os relatórios num processador de texto normal (como o Word), provavelmente demorarias mais tempo, o resultado ficaria menos visualmente apelativo, e (bastante) pior formatado.
 
 
-### 1. Que faz o LaTeX? Como posso fazer um documento?
+### 1. Mas o que faz o LaTeX? Como posso fazer um documento?
 
-O LaTeX é um software de composição tipográfica de documentos, que funciona à base de código. Escreverás o texto com comandos de formatação num ficheiro `.tex`, e depois compilarás para um PDF de alta qualidade. O funcionamento do LaTeX pode ser dividido em três partes:
+O LaTeX é um programa de composição tipográfica de documentos, que funciona à base de código. Isto significa que tu escreves (melhor, *descreves*) o teu documento com comandos de formatação num ficheiro `.tex`, e executas a compilação (tradução) para PDF. Não te preocupes se nunca escreveste código! O formato em si é muito básico, os comandos são todos palavras em inglês que já deves conhecer. Não é comparavel a uma linguagem de programação 'a sério'.
 
-- Separação de conteúdo e formatação: Concentras-te apenas no que estás a escrever (parágrafos, fórmulas, etc.), enquanto o sistema cuida automaticamente da tipografia, espaçamentos, paginação.
+Quando às funcionalidades do LaTeX, e como escrever código TeX, terás de ter em mente três aspetos:
 
-- Fórmulas matemáticas: É a ferramenta padrão para escrever equações matemáticas complexas claramente formatas em qualidade.
+- **Separação de conteúdo e formatação**: O utilizador concentra-se apenas no que está a escrever (parágrafos, fórmulas, etc.), enquanto o programa cuida automaticamente da tipografia e espaçamentos.
 
-- Referências automáticas: Faz gestão automática de figuras e bibliografia.
+- **Fórmulas matemáticas**: É a ferramenta padrão para escrever expressões matemáticas a computador. Irrespetivamente da complexidade, ficam legíveis e em alta definição.
 
-Para exemplificar um documento básico em LaTeX com tudo isto:
+- **Referências automáticas**: O LaTeX fará a gestão automática das figuras (imagens) e bibliografia dos teus documentos.
+
+Para exemplificar, incluí um documento básico em LaTeX com tudo isto:
 
 ```latex
-% O simbolo de por cento serve como comentário.
-% Tudo à frente deste não é visto pelo compilador
+% O simbolo '%' faz com que tudo à sua frente seja ignorado pelo LaTeX
 
-\documentclass{article} % Tipo de documento (neste caso, artigo científico)
+% Todos os documentos LaTeX têm um tipo básico: artigo, livro, carta, etc.
 
-% Carrega o BibLaTeX, que gere a bibliografia
-\usepackage[backend=biber,style=numeric]{biblatex}
-% Usa o ficheiro de referências bibliografia.bib
-\addbibresource{bibliografia.bib}
+\documentclass{article}
+% |
+% `-> Este é um artigo, tem Secções, mas não tem Capítulos como um livro
 
-% Seleciona a língua portuguesa
-\usepackage[portuguese]{babel}
 
-% Exemplo de formatação: pôr o fundo negro e o texto branco
-\usepackage{xcolor}
+% O LaTeX, por si só, é bastante básico, para coisas mais complexas, carregamos Pacotes
+% Cada pacote adiciona os seus próprios comandos, que facilitam certas coisas, como exemplos:
+
+\usepackage[portuguese]{babel}%  -> Suporte para várias línguas (como o português)
+
+\usepackage[backend=biber,style=authortitle]{biblatex}%  -> Gestor de bibliografia avançado
+
+\usepackage{xcolor}%  -> Definições de cor do documento
+
+
+% Alguns exemplos de comandos:
+
+% Do 'xcolor'
 \pagecolor{black}
 \color{white}
+
+% Do BibLaTeX - usa o ficheiro bibliográfico .bib (será-te útil!)
+\addbibresource{bibliografia.bib}
 
 % Tudo atrás deste comando é referido como "preâmbulo"
 \begin{document}
@@ -73,7 +83,7 @@ Para exemplificar um documento básico em LaTeX com tudo isto:
         f(x) = \int_{-\infty}^{\infty} \left( \sum_{n=1}^{\infty} \frac{\alpha_n}{n^2} \right) e^{-\frac{(x-\mu)^2}{2\sigma^2}} \, dx
     $
 
-    \item \textbf{Referências automáticas}: Faz gestão automática de figuras e bibliografia. Podemos citar um livro: \cite{knuth1984}. % Adiciona uma referência
+    \item \textbf{Referências automáticas}: Faz gestão automática de figuras e bibliografia. Podemos citar um livro: \cite{livroLatex}. % Adiciona uma referência
 \end{itemize}
 
 
