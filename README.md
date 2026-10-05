@@ -46,9 +46,9 @@ Para exemplificar, incluí um documento básico em LaTeX com tudo isto:
 % O LaTeX, por si só, é bastante básico, para coisas mais complexas, carregamos Pacotes
 % Cada pacote adiciona os seus próprios comandos, que facilitam certas coisas, como exemplos:
 
-\usepackage[portuguese]{babel}%  -> Suporte para várias línguas (como o português)
+\usepackage[portuguese]{babel} % -> Suporte para várias línguas (como o português)
 
-\usepackage[backend=biber,style=authoryear]{biblatex}%  -> Gestor de bibliografia avançado
+\usepackage[backend=biber]{biblatex} % -> Gestor de bibliografia avançado
 
 \usepackage{xcolor}%  -> Definições de cor do documento
 
@@ -102,8 +102,9 @@ Para exemplificar, incluí um documento básico em LaTeX com tudo isto:
     % Adicionamos referências com o comando '\cite{}', sendo o nome igual ao que
     % definimos no ficheiro bibliografia.bib
     \item \textbf{Referências automáticas}: Faz gestão automática de figuras e
-    bibliografia. Podemos citar um livro: \cite{livroLatex} e este aparecerá
+    bibliografia. Podemos citar um livro: (\cite{livroLatex}), e este aparecerá
     nas refrências.
+    % (O comando \textbf{} formata o texto para bold)
 
 \end{itemize}
 
@@ -117,22 +118,22 @@ Para exemplificar, incluí um documento básico em LaTeX com tudo isto:
 
 Isto resulta no [seguinte documento](imagens/demo_latex.pdf):
 
-<p align="center">
-  <img src="imagens/demo_latex.png" width="750">
-</p>
+<p align="center"> <img src="imagens/demo_latex.png" width="750"> </p>
 
 
-### 2. Está bem, convenceste-me. Como é que instalo isto?
+### 2. Está bem, está bem, convenceste-me. Como é que instalo isto?
 
-Depende. **Se estiveres no Linux** (que, já agora, eu <u>recomendo usares</u> se estiveres disposto a fazer um pequeno esforço), abre o teu terminal e executa o comando
+Usarei o meu método preferido para instalar, porque existem várias, e porque acho que há uma alternativa melhor ao método do professor, se estiveres disposto a aprender um pouco sobre como isto tudo funciona. **Aviso**: Não poderei ajudar sempre que tiveres um problema, contudo, se os tiveres, muito provavelmente são por causa do *teu código* e não ao meu método de instalação. O meu método funciona com [quase](https://github.com/tectonic-typesetting/tectonic/issues/1086#issuecomment-2364793487) tudo, e se o professor pedir algo incompatível com ele, adicionarei uma solução neste site. 
+
+Quanto à instalação, depende. **Se estiveres no Linux** (Manjaro ou CachyOS), (que, já agora, eu <ins>recomendo usares</ins> se estiveres disposto a fazer outro pequeno esforço), abre o teu terminal e executa o comando
 
 ```bash
 sudo pacman -S tectonic biber
 ```
 
-*Quem não tem familiaridade com o uso da linha de comandos, pode começar por ler este pequeno guia: <https://promovaweb.com/glossario/cli>, e outros do mesmo site*
+*(A quem não tem familiaridade com o uso da linha de comandos, recomendo ler este pequeno guia: <https://promovaweb.com/glossario/cli> e outros do mesmo site)*
 
-Este comando instalará o Tectonic, a nossa *engine* (motor) e *distribuição* de LaTeX. Uma engine é o programa que contém o sistema básico de LaTeX, usado para compilar o teu texto. A distribuição é o pacote completo que gere e instala todas as ferramentas e adicionais (bibliotecas, fontes) especificados em cada documento. Também instala o Biber, que age juntamente com o BibLaTeX para criar a bibliografia.
+Este comando instalará o Tectonic, que é ambos a nossa **engine** (motor) e **distribuição** de LaTeX. Uma engine é o programa que contém o sistema básico de LaTeX, usado para transformar o teu texto num PDF. A distribuição gere e instala todas as ferramentas e adicionais (bibliotecas, fontes) especificados em cada documento. O comando também instala o Biber, que age juntamente com o BibLaTeX para criar a bibliografia.
 
 **Se estiveres no Windows**, abre o PowerShell, e cola e executa o seguinte comando:
 
@@ -140,7 +141,13 @@ Este comando instalará o Tectonic, a nossa *engine* (motor) e *distribuição* 
 md "C:\Tectonic" -f; [Environment]::SetEnvironmentVariable("Path", "$([Environment]::GetEnvironmentVariable("Path","User"));C:\Tectonic", "User")
 ```
 
-Agora, vai ao site <https://tectonic-typesetting.github.io/latest.html>, e, na lista no fundo da página, clicka no título 'tectonic...windows-msvc.zip". Será transferido um arquivo `.zip`, que deverás extrair (com o botão direito no ficheiro no Explorador, clicka em 'Extrair Tudo'), e gravar o resultante `tectonic.exe` na pasta `C:\Tectonic`.
+Quando estiver completo, terás uma nova pasta no teu disco C:, que podes encontrar em 'Este PC' -> Disco Local (C:). A pasta chama-se 'Tectonic'.
+
+A seguir, vai ao site <https://tectonic-typesetting.github.io/latest.html>. Na lista do fundo da página, clicka no 'tectonic...windows-msvc.zip" a azul (o número poderá ser diferente no futuro):
+
+<p align="center"> <img src="imagens/tectonic_ficheiro.png" width="750"> </p>
+
+Será transferido um arquivo `.zip`, que deverás extrair: abre o Explorador de Ficheiros, carrega com o botão direito no arquivo, e clicka em 'Extrair Tudo', ou abre como WinRAR ou 7-Zip para fazer o mesmo. Aparecerá um ficheiro chamado `tectonic.exe`, copia-o, e cola-o na pasta `C:\Tectonic`
 
 
 <br>
@@ -165,7 +172,7 @@ No preâmbulo, altere o comando `\setmainfont` de modo a incluir:
 ```
 
 Para o Biber funcionar, tem de estar instalado localmente. Contudo, o Tectonic tem conflitos de versão com o BibLaTeX do Arch. Isto pode ser aliviado se a sua localização for especificada à hora da compilação. Use a opção `-Z search-path=auxiliares/biblatex/` quando for compilar.
-**AVISO:** não funciona com o BibLaTeX 3.22, pois o Tectonic ainda usa o TeX Live 2025. Use a versão 3.21 do SourceForge (presente nas pastas demo/ e auxilares/).
+**AVISO**: não funciona com o BibLaTeX 3.22, pois o Tectonic ainda usa o TeX Live 2025. Use a versão 3.21 do SourceForge (presente nas pastas demo/ e auxilares/).
 
 A opção `german` não funciona no comando `\setotherlanguages{}`. `ngerman` também não funciona.
 
