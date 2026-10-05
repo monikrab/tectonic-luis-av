@@ -29,7 +29,12 @@ Quando às funcionalidades do LaTeX, e como escrever código TeX, terás de ter 
 Para exemplificar, incluí um documento básico em LaTeX com tudo isto:
 
 ```latex
-% O simbolo '%' faz com que tudo à sua frente seja ignorado pelo LaTeX
+%  O simbolo '%' faz com que tudo à sua frente na mesma linha seja ignorado pelo
+%  LaTeX, usamo-lo para escrever mensagens (comentários) que explicam o nosso código
+%
+%  Todos os comandos começam com '\', e os que têm argumentos (opções)
+%  usam chavetas '{}' como parênteses
+
 
 % Todos os documentos LaTeX têm um tipo básico: artigo, livro, carta, etc.
 
@@ -43,7 +48,7 @@ Para exemplificar, incluí um documento básico em LaTeX com tudo isto:
 
 \usepackage[portuguese]{babel}%  -> Suporte para várias línguas (como o português)
 
-\usepackage[backend=biber,style=authortitle]{biblatex}%  -> Gestor de bibliografia avançado
+\usepackage[backend=biber,style=authoryear]{biblatex}%  -> Gestor de bibliografia avançado
 
 \usepackage{xcolor}%  -> Definições de cor do documento
 
@@ -57,42 +62,60 @@ Para exemplificar, incluí um documento básico em LaTeX com tudo isto:
 % Do BibLaTeX - usa o ficheiro bibliográfico .bib (será-te útil!)
 \addbibresource{bibliografia.bib}
 
-% Tudo atrás deste comando é referido como "preâmbulo"
+
+
+% O comando a seguir tira-nos do modo de configuração (o 'preâmbulo')
+% e inicia o modo documento
 \begin{document}
 
 
-% Secção do documento
+% O comando \section{} define uma secção
 \section{Vantagens do \LaTeX}
 
-% Lista
+
+% 'itemize' define uma lista de pontos não ordenada
 \begin{itemize}
-    % Item da lista
-    \item \textbf{Separação de conteúdo e formatação}: Concentras-te apenas no que estás a escrever (parágrafos, fórmulas, etc.), enquanto o sistema cuida automaticamente da tipografia, espaçamentos, paginação.
 
-    \item \textbf{Fórmulas matemáticas}: É a ferramenta padrão para escrever equações matemáticas complexas claramente formatas em qualidade. Por exemplo:
+    % Cada \item define um ponto da lista
+    \item Separação de conteúdo e formatação: Concentras-te apenas
+    no que estás a escrever (parágrafos, fórmulas, etc.), enquanto o sistema
+    cuida automaticamente da tipografia, espaçamentos, paginação.
+    % |
+    % `-> No PDF, não vão aparecer parágrafos aqui. Ou deixamos uma
+    %     linha vazia, ou usamos o atalho '\\', como no item abaixo
 
-    % Fórmula
-    % Os cifrões ($$) denota o início e fim da equação.
-    $$
-        f(x) = \int_{-\infty}^{\infty} \left( \sum_{n=1}^{\infty} \frac{\alpha_n}{n^2} \right) e^{-\frac{(x-\mu)^2}{2\sigma^2}} \, dx
-    $$
 
-    % Um cifrão ($) faz o mesmo, mas comprime
-    % a equação para caber na altura duma linha
-    $
-        f(x) = \int_{-\infty}^{\infty} \left( \sum_{n=1}^{\infty} \frac{\alpha_n}{n^2} \right) e^{-\frac{(x-\mu)^2}{2\sigma^2}} \, dx
-    $
+    \item Fórmulas matemáticas: É a ferramenta padrão para escrever \\
+    (linha exemplar) \\
+    equações matemáticas complexas claramente formatas em qualidade. Por exemplo: \\
 
-    \item \textbf{Referências automáticas}: Faz gestão automática de figuras e bibliografia. Podemos citar um livro: \cite{livroLatex}. % Adiciona uma referência
+    % Para escrever matemática, usamos o cifrão ($) para denotar o seu início e fim.
+    $ f(x) = \int_{-\infty}^{\infty} \sum_{n=1}^{\infty} \frac{\alpha_n}{n^2}, dx $
+  % |
+  % `-> Usar penas um cifrão comprime a expressão para caber na altura duma linha
+
+    % Dois cifrões fazem com que cada símbolo ocupe a sua altura normal
+    % Se estiver numa linha separada, também fica centrada
+    $$ f(x) = \int_{-\infty}^{\infty} \sum_{n=1}^{\infty} \frac{\alpha_n}{n^2}, dx $$
+
+
+    % Adicionamos referências com o comando '\cite{}', sendo o nome igual ao que
+    % definimos no ficheiro bibliografia.bib
+    \item \textbf{Referências automáticas}: Faz gestão automática de figuras e
+    bibliografia. Podemos citar um livro: \cite{livroLatex} e este aparecerá
+    nas refrências.
+
 \end{itemize}
 
 
-
+% Não te esqueças de escrever a bibliografia no final
 \printbibliography
+
 \end{document}
 ```
 
-Isto resulta no seguinte documento (print cortada, o resultado final é em tamanho A4):
+
+Isto resulta no [seguinte documento](imagens/demo_latex.pdf):
 
 <p align="center">
   <img src="imagens/demo_latex.png" width="750">
