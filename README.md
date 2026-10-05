@@ -138,27 +138,56 @@ Este comando instalará o Tectonic, que é ambos a nossa **engine** (motor) e **
 **Se estiveres no Windows**, abre o PowerShell, e cola e executa o seguinte comando:
 
 ```pwsh
-md "C:\Tectonic" -f; [Environment]::SetEnvironmentVariable("Path", "$([Environment]::GetEnvironmentVariable("Path","User"));C:\Tectonic", "User")
+md "C:\Latex" -f; [Environment]::SetEnvironmentVariable("Path", "$([Environment]::GetEnvironmentVariable("Path","User"));C:\Latex", "User")
 ```
 
-Quando estiver completo, terás uma nova pasta no teu disco C:, que podes encontrar em 'Este PC' -> Disco Local (C:). A pasta chama-se 'Tectonic'.
+Quando estiver completo, terás uma nova pasta chamada 'Latex' no teu disco C:, que podes encontrar em 'Este PC' -> Disco Local (C:).
 
 A seguir, vai ao site <https://tectonic-typesetting.github.io/latest.html>. Na lista do fundo da página, clicka no 'tectonic...windows-msvc.zip' a azul (o número poderá ser diferente no futuro):
 
-<p align="center"> <img src="imagens/tectonic_ficheiro.png" width="750"> </p>
+<p align="center"> <img src="imagens/tectonic_ficheiro.png" width="550"> </p>
 
-Será transferido um arquivo `.zip`, que deverás extrair: abre o Explorador de Ficheiros, carrega com o botão direito no arquivo, e clicka em 'Extrair Tudo', ou abre como WinRAR ou 7-Zip para fazer o mesmo. Aparecerá um ficheiro chamado `tectonic.exe`, copia-o, e cola-o na pasta `C:\Tectonic`. Seguidamente, repete o mesmo processo:
+Será transferido um arquivo `.zip`, que deverás extrair: abre o Explorador de Ficheiros, carrega com o botão direito no arquivo, e clicka em 'Extrair Tudo', ou abre como WinRAR ou 7-Zip para fazer o mesmo. Aparecerá um ficheiro chamado `tectonic.exe`, copia-o, e cola-o na pasta `C:\Latex`. Seguidamente, repete o mesmo processo:
 
-- **Biber.** Vai a este site <https://sourceforge.net/projects/biblatex-biber/files/biblatex-biber/current/binaries/Windows/> e copia o biber.exe do ficheiro abaixo para a pasta `Tectonic`
+- **Biber.** Vai a este site <https://sourceforge.net/projects/biblatex-biber/files/biblatex-biber/current/binaries/Windows/> e copia o `biber.exe` do ficheiro abaixo para a pasta `Latex`
 
-<p align="center"> <img src="imagens/biber_ficheiro.png" width="750"> </p>
+<p align="center"> <img src="imagens/biber_ficheiro.png" width="550"> </p>
 
-- **Python.** Neste site <https://www.python.org/downloads/windows/>, seleciona a opção 'Windows embeddable package (64-bit)' (como na imagem), e copia todos os ficheiros dentro da pasta extraída para `Tectonic`.
+- **Python.** Neste site <https://www.python.org/downloads/windows/>, seleciona a opção 'Windows embeddable package (64-bit)' (como na imagem), e copia **todos os ficheiros dentro da pasta** extraída para a pasta `Latex`.
 
-<p align="center"> <img src="imagens/python_ficheiro.png" width="750"> </p>
+<p align="center"> <img src="imagens/python_ficheiro.png" width="550"> </p>
 
 
-## 4.
+## 4. Como compilar para PDF
+
+Agora que tens tudo instalado, estás preparado para compilar um relatório. Devido a diferenças da engine, só conseguirás compilar se tiveres umas pastas extras dentro da pasta `auxiliares`. Apenas tens de, na lista de ficheiros deste site, carregar no `relatorio-base.zip`, e descarregar o ficheiro:
+
+<p align="center"> <img src="imagens/relatorio_ficheiro.png" width="550"> </p>
+
+Extrai a pasta e copia a resultante para um lugar à tua escolha (por exemplo, `Documentos`).
+
+#### Se estiveres no Linux (passa à frente se não)
+
+#### Se estiveres no Windows
+
+No Explorador, entra na pasta 'relatorio-base' que contém o ficheiro `modelo-de-relatorio.tex`. Carrega na barra de endereço, apaga o texto, e escreve 'powershell' (ou 'powershell.exe' se não funcionar), deste modo:
+
+<p align="center"> <img src="imagens/powershell.png" width="550"> </p>
+
+Isto abrirá um terminal PowerShell na pasta. Daqui, podes executar um *script* Python que escrevi para compilares mais convenientemente. Fá-lo executando este comando
+
+```pwsh
+python.exe make.py modelo-de-relatorio.tex
+```
+
+*(Nota: para repetires comando anteriores, carrega na a tecla ↑, e ↓ para voltar para os posteriores)*
+
+O comando demorará o seu tempo a terminar. Quando deixar de escrever texto, se não houver nenhum erro, terás um ficheiro `modelo-de-relatorio.pdf` dentro da pasta, que poderás abrir e ler. Parabéns, tens uma instalação de LaTeX funcional!
+
+
+## 5. Configurar um editor de documentos
+
+
 
 
 <br>
