@@ -3,7 +3,7 @@
 <h2 align="center">Física — 12º Ano</h2>
 
 
-### 0. Fundamentos
+### 1. Fundamentos
 
 Para conseguries escrever relatórios sobre os trabalhos que farás na disciplina, o professor está a mandar-te instalar uma coisa de que provavelmente nunca ouviste falar, chamado Latex (estilizado como LaTeX; lê-se 'lateq', porque o X é um χ (qui) grego)—porquê? *Não posso só escrever os meus relatórios no o Word ou no Google Docs?*
 
@@ -14,7 +14,7 @@ Teoricamente... podes. Contudo, isto não é tão boa ideia como poderás imagin
 Ou seja, se tentasses escrever os relatórios num processador de texto normal (como o Word), provavelmente demorarias mais tempo, o resultado ficaria menos visualmente apelativo, e (bastante) pior formatado.
 
 
-### 1. Mas o que faz o LaTeX? Como posso fazer um documento?
+### 2. Mas o que faz o LaTeX? Como posso fazer um documento?
 
 O LaTeX é um programa de composição tipográfica de documentos, que funciona à base de código. Isto significa que tu escreves (melhor, *descreves*) o teu documento com comandos de formatação num ficheiro `.tex`, e executas a compilação (tradução) para PDF. Não te preocupes se nunca escreveste código! O formato em si é muito básico, os comandos são todos palavras em inglês que já deves conhecer. Não é comparavel a uma linguagem de programação 'a sério'.
 
@@ -121,7 +121,7 @@ Isto resulta no [seguinte documento](imagens/demo_latex.pdf):
 <p align="center"> <img src="imagens/demo_latex.png" width="750"> </p>
 
 
-### 2. Está bem, está bem, convenceste-me. Como é que instalo isto?
+### 3. Está bem, está bem, convenceste-me. Como é que instalo isto?
 
 Usarei o meu método preferido para instalar, porque existem várias, e porque acho que há uma alternativa melhor ao método do professor, se estiveres disposto a aprender um pouco sobre como isto tudo funciona. **Aviso**: Não poderei ajudar sempre que tiveres um problema, contudo, se os tiveres, muito provavelmente são por causa do *teu código* e não ao meu método de instalação. O meu método funciona com [quase](https://github.com/tectonic-typesetting/tectonic/issues/1086#issuecomment-2364793487) tudo, e se o professor pedir algo incompatível com ele, adicionarei uma solução neste site. 
 
@@ -158,6 +158,7 @@ Será transferido um arquivo `.zip`, que deverás extrair: abre o Explorador de 
 <p align="center"> <img src="imagens/python_ficheiro.png" width="750"> </p>
 
 
+## 4.
 
 
 <br>
