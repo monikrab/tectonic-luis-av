@@ -1,0 +1,49 @@
+
+SETUP DA COMPILAÇÃO COM TECTONIC -- FÍSICA 12º ANO
+==================================================
+
+Instale o Tectonic. Numa distribuição Arch Linux:
+
+sudo pacman -S tectonic
+
+No macOS:
+
+curl --proto '=https' --tlsv1.2 -fsSL https://drop-sh.fullyjustified.net |sh
+sudo mv tectonic /usr/local/bin/
+
+No Windows (PowerShell):
+
+[System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072
+iex ((New-Object System.Net.WebClient).DownloadString('https://drop-ps1.fullyjustified.net'))
+cd \Users
+Move-Item -Path ".\tectonic.exe" -Destination "$env:LOCALAPPDATA\Local\Programs\Python\Python*\Scripts\"
+
+
+<Apenas comandos de Linux daqui para baixo>
+
+Instale o biber:
+
+sudo pacman -S biber
+
+Instale o BibLaTeX. Na pasta do relatório, execute
+
+wget https://sourceforge.net/projects/biblatex/files/biblatex-3.21/biblatex-3.21.tgz
+tar xf biblatex-3.21.tgz
+mkdir -p auxiliares/biblatex/
+cp -r biblatex/latex/* auxiliares/biblatex/
+rm -r biblatex-3.21.tgz biblatex
+
+Instale a fonte EB Garamond:
+
+git clone https://github.com/monikrab/tectonic-luis-av
+mkdir -p auxiliares/ebgaramond
+cp -r tectonic-luis-av/preambulo/auxiliares/ebgaramond auxiliares/ebgaramond
+
+Copie o script 'make.py':
+
+cp tectonic-luis-av/make.py .
+rm -r tectonic-luis-av
+
+Para compilar sem ajuda do script, execute:
+
+tectonic -X compile [ficheiro.tex] -Z search-path=auxiliares/biblatex/

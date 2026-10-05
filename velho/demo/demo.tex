@@ -1,0 +1,171 @@
+%%
+%% UTF-8       UTF-8      UTF-8       UTF-8       UTF-8       UTF-8
+%% UTF-8       UTF-8      UTF-8       UTF-8       UTF-8       UTF-8
+%%
+%% XeLaTeX  XeLaTeX  XeLaTeX  XeLaTeX  XeLaTeX  XeLaTeX  XeLaTeX  XeLaTeX  
+\lccode`\-=`\-
+%\defaulthyphenchar=127
+% \documentclass[11pt,a4paper,oneside]{extarticle}
+\documentclass[12pt,a4paper,twoside]{article}
+\input{auxiliares/preambulo.tex}
+
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{auxiliares/capa.tex}
+\cleardoublepage
+
+\tableofcontents
+\newpage
+
+\begin{abstract}
+
+\newcount\zz
+\loop
+Olá, mundo!!!
+\advance\zz1
+\ifnum\zz<10
+\repeat
+
+\end{abstract}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Introdução}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{se for o caso de ser necessário}
+
+\newcount\zz
+\loop
+Olá, mundo!!!\cite{horowitz2015art,boylestad2012electronic,floyd2007electronic}
+\advance\zz1
+\ifnum\zz<10
+\repeat
+
+\subsection{se for o caso de ser necessário}
+
+\newcount\zz
+\loop
+Olá, mundo!!!\cite{horowitz2015art,boylestad2012electronic,floyd2007electronic}
+\advance\zz1
+\ifnum\zz<10
+\repeat
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[
+  width=0.5\textwidth,
+  keepaspectratio
+  ]{figuras/figura01.pdf} 
+  \captionsetup{width=0.8\textwidth,justification=centering,labelfont=bf,textfont=it,format=plain,labelformat=default,labelsep=period,font=small,name=Figura\,}
+  \caption{Valores de amplitude para uma onda sinusoidal ca.}
+\end{figure}
+
+\subsection{Rectificadores de Onda Completa}
+
+
+\begin{itemize}
+    \item \newcount\zz
+                \loop
+                Olá, mundo!!!\cite{horowitz2015art,boylestad2012electronic,floyd2007electronic}
+                \advance\zz1
+                \ifnum\zz<10
+                \repeat
+    \item \newcount\zz
+                \loop
+                Olá, mundo!!!\cite{horowitz2015art,boylestad2012electronic,floyd2007electronic}
+                \advance\zz1
+                \ifnum\zz<10
+                \repeat 
+\end{itemize}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\lstset{
+    language={bash},
+    basicstyle=\ttfamily\small,
+    breaklines=true,
+    breakatwhitespace=false,
+    showstringspaces=false,
+    columns=flexible
+}
+\begin{tcolorbox}[
+    colback=gray!10,
+    colframe=black,
+    title={Modelo Spice do Díodo 1N4007},
+    breakable
+]
+\begin{lstlisting}
+* SPICE model rectifier diode ***1N4007***
+* Use the symbol file ***1n4007.asy***
+*
+* (c) Diotec Semiconductor AG
+* www.diotec.com
+* 2017-11-21
+*
+*********************************************************
+* This model is for simulation purposes only. It does *
+* not replace reviewing of the data sheet nor real life *
+* testing of the part inside the application. *
+*********************************************************
+*
+.subckt 1N4007 A K params: Vrrm=1000 Vrsm=1000 Ir=5u Irsm=5u Vf=1.1 Ifav=1 Rs=.05 trr=1500n Cj=15p Eg=1.11 Xti=3
+* Above values are an example for the ***1N4007***. Using the symbol
+* above symbol file allows for direct insertion of other values
+* according to these data sheet parameters:
+*
+* Vrrm Repetitive peak reverse voltage
+* Ir Leakage current
+* Vrsm Surge peak reverse voltage / Reverse avalanche breakdown voltage
+* Irsm Defined at avalanche diodes, otherwise set Irsm = Ir
+* Vf Forward voltage
+* Ifav Test current for Vf, usually equal to average forward rectified current
+* trr Reverse recovery time; for Schottky, set trr=5n
+* Cj Junction capacitance at 4V
+*
+* Activation energy: Eg=1.11 for Si (pn) rectifier, Eg=.69 for Schottky (metal barrier) rectifier
+* Series resistance: Rs=(Vf@3*Ifav - Vf@Ifav)/(3*Ifav - Ifav) from data sheet curve
+* Sat.-current temp. exp: Xti=3 for Si (pn) rectifier, Xti=2 for Schottky (metal barrier) rectifier
+D A K Rectifier
+.model Rectifier D(Is={Ir/40} Bv={Vrsm*1.05} Ibv={Ir} Vpk=Vrrm N={.8*Vf/25m/(ln(Ifav)-ln(Ir/40))} Rs={Rs} Eg={Eg} Xti={Xti} Iave={Ifav} Cjo={Cj*2} M=.33 Tt={trr} Vp=.5 mfg=Diotec type=Rectifier)
+.ends
+\end{lstlisting}
+\end{tcolorbox}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+% \printbibliography
+\printbibliography[title={Referências}]
+
+\newpage
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\appendix
+\appendixpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Validação de um modelo SPICE do díodo 1N4007}
+
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Outra coisa qualquer}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\label{fim}\end{document}
+
+
+

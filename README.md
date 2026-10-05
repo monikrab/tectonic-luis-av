@@ -143,11 +143,21 @@ md "C:\Tectonic" -f; [Environment]::SetEnvironmentVariable("Path", "$([Environme
 
 Quando estiver completo, terás uma nova pasta no teu disco C:, que podes encontrar em 'Este PC' -> Disco Local (C:). A pasta chama-se 'Tectonic'.
 
-A seguir, vai ao site <https://tectonic-typesetting.github.io/latest.html>. Na lista do fundo da página, clicka no 'tectonic...windows-msvc.zip" a azul (o número poderá ser diferente no futuro):
+A seguir, vai ao site <https://tectonic-typesetting.github.io/latest.html>. Na lista do fundo da página, clicka no 'tectonic...windows-msvc.zip' a azul (o número poderá ser diferente no futuro):
 
 <p align="center"> <img src="imagens/tectonic_ficheiro.png" width="750"> </p>
 
-Será transferido um arquivo `.zip`, que deverás extrair: abre o Explorador de Ficheiros, carrega com o botão direito no arquivo, e clicka em 'Extrair Tudo', ou abre como WinRAR ou 7-Zip para fazer o mesmo. Aparecerá um ficheiro chamado `tectonic.exe`, copia-o, e cola-o na pasta `C:\Tectonic`
+Será transferido um arquivo `.zip`, que deverás extrair: abre o Explorador de Ficheiros, carrega com o botão direito no arquivo, e clicka em 'Extrair Tudo', ou abre como WinRAR ou 7-Zip para fazer o mesmo. Aparecerá um ficheiro chamado `tectonic.exe`, copia-o, e cola-o na pasta `C:\Tectonic`. Seguidamente, repete o mesmo processo:
+
+- **Biber.** Vai a este site <https://sourceforge.net/projects/biblatex-biber/files/biblatex-biber/current/binaries/Windows/> e copia o biber.exe do ficheiro abaixo para a pasta `Tectonic`
+
+<p align="center"> <img src="imagens/biber_ficheiro.png" width="750"> </p>
+
+- **Python.** Neste site <https://www.python.org/downloads/windows/>, seleciona a opção 'Windows embeddable package (64-bit)' (como na imagem), e copia todos os ficheiros dentro da pasta extraída para `Tectonic`.
+
+<p align="center"> <img src="imagens/python_ficheiro.png" width="750"> </p>
+
+
 
 
 <br>
