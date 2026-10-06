@@ -56,8 +56,8 @@ Para exemplificar, incluí um documento básico em LaTeX com tudo isto:
 % Alguns exemplos de comandos:
 
 % Do 'xcolor'
-\pagecolor{black}
-\color{white}
+\pagecolor{black} % Fundo preto
+\color{white}     % Texto branco
 
 % Do BibLaTeX - usa o ficheiro bibliográfico .bib (será-te útil!)
 \addbibresource{bibliografia.bib}
@@ -153,12 +153,12 @@ Será transferido um arquivo `.zip`, que deverás extrair: abre o Explorador de 
 
 <p align="center"> <img src="imagens/biber_ficheiro.png" width="550"> </p>
 
-- **Python.** Neste site <https://www.python.org/downloads/windows/>, seleciona a opção 'Windows embeddable package (64-bit)' (como na imagem), e copia **todos os ficheiros dentro da pasta** extraída para a pasta `Latex`.
+- **Python.** Neste site <https://www.python.org/downloads/windows/>, seleciona a opção 'Windows embeddable package (64-bit)' (como na imagem), e copia **tudo dentro da pasta** extraída para a pasta `Latex`.
 
 <p align="center"> <img src="imagens/python_ficheiro.png" width="550"> </p>
 
 
-## 4. Como compilar para PDF
+### 4. Como compilar para PDF
 
 Agora que tens tudo instalado, estás preparado para compilar um relatório. Devido a diferenças da engine, só conseguirás compilar se tiveres umas pastas extras dentro da pasta `auxiliares`. Apenas tens de, na lista de ficheiros deste site, carregar no `relatorio-base.zip`, e descarregar o ficheiro:
 
@@ -167,6 +167,21 @@ Agora que tens tudo instalado, estás preparado para compilar um relatório. Dev
 Extrai a pasta e copia a resultante para um lugar à tua escolha (por exemplo, `Documentos`).
 
 #### Se estiveres no Linux (passa à frente se não)
+
+Abre o teu terminal na pasta 'relatorio-base', e usa `ls` para verificar que lá está o teu `modelo-de-relatorio.tex`. Poderás então executar o meu *script* de compilação, que chama o Tectonic automáticamente:
+
+```sh
+python make.py modelo-de-relatorio.tex
+```
+
+Podes abreviar o comando dando permissões de execução ao script. No terminal, na mesma diretoria:
+
+```bash
+chmod +x make.py
+```
+
+A partir de então, poderás compilar apenas com `./make.py modelo-de-relatorio.tex`. E parabéns, já és capaz de escrever e compilar ficheiros LaTeX!
+
 
 #### Se estiveres no Windows
 
@@ -185,9 +200,70 @@ python.exe make.py modelo-de-relatorio.tex
 O comando demorará o seu tempo a terminar. Quando deixar de escrever texto, se não houver nenhum erro, terás um ficheiro `modelo-de-relatorio.pdf` dentro da pasta, que poderás abrir e ler. Parabéns, tens uma instalação de LaTeX funcional!
 
 
-## 5. Configurar um editor de documentos
+### 5. Configurar um editor de documentos
 
+Para usar o Tectonic, recomendo-te usar o editor Visual Studio Code, da Microsoft. Existem maneiras de fazer tudo no terminal, com editores como o [Helix](https://helix-editor.com/) ou [Neovim](https://neovim.io/), mas é muito complexo, então deixei apenas os links para quem se interessar.
 
+A configuração do ambiente de edição é bastante básica: instala-se o editor, depois algumas extensões, e finalmente misturamos tudo num *layout* com tudo o que é preciso. Para instalar o editor:
+
+#### No Linux
+
+Vai à página de download do VSCode (<https://code.visualstudio.com/Download>) e clicka na opção 'x64' em '.tar.gz':
+
+<p align="center"> <img src="imagens/vscode_ficheiro_linux.png" width="450"> </p>
+
+Extrai o ficheiro descarregado, e abre o terminal na pasta extraída ('VSCode-linux-x64'). Copia, para dentro dessa pasta, o ficheiro [com.microsoft.VSCode.desktop](./com.microsoft.VSCode.desktop), que poderás descarregar diretamente do GitHub para lá. Depois, executa este comando no terminal (dentro da pasta 'VSCode...'):
+
+```bash
+bash -c 'sudo ln -s $(pwd)/bin/code /usr/local/bin/code && sudo cp resources/app/resources/linux/code.png /usr/share/icons/ && sudo cp com.microsoft.VSCode.desktop /usr/share/applications'
+```
+
+Quando terminar, o teu computador reconhecerá o VS Code como uma aplicação, que poderás abrir a partir da pesquisa, ou pelo comando `code` no terminal. Para não fechar quando quiseres fechar o teu terminal, abre normalmente pela barra de pesquisa (recomendo afixares na barra de taréfas para ser mais fácil).
+
+#### No Windows
+
+Dirige-te a <https://code.visualstudio.com/Download> e clicka na opção 'x64' do 'User Installer' para Windows:
+
+<p align="center"> <img src="imagens/vscode_ficheiro_win64.png" width="450"> </p>
+
+Isto descaregarrá um ficheiro executável. Abre-o, e segue as instruções. Quando estiver instalado, abre o programa, e afixa-o na barra de taréfas por conveniência.
+
+#### Configuração
+
+Fecha os pop-ups que abrirão inicialmente, e a janela do 'Chat' à direita. Terás um ecrã mais ou menos assim:
+
+<p align="center"> <img src="imagens/vscode-home.png" width="650"> </p>
+
+A seguir, instala duas extensões: clicka no botão das quatro caixas, no canto superior esquerdo, e usa a barra de pesquisa para procurar as extensões:
+
+- 'vscode-pdf Next'
+- 'TexLab'
+
+Tendo escrito tudo, clicka em 'Instalar', na caixa da extensão:
+
+<p align="center"> <img src="imagens/vscode-ext.png" width="450"> </p>
+
+Confirma que confias no desenvolvedor das duas extensões. No final, deverás ter uma página de extensões com esta aparência:
+
+<p align="center"> <img src="imagens/vscode-ext2.png" width="550"> </p>
+
+Podes fechar a aba das extensões como a abriste. Agora, abre a pasta do relatório base pelo menu 'Ficheiro' em cima:
+
+<p align="center"> <img src="imagens/vscode-folder.png" width="450"> </p>
+
+Terás de dar permissões próprias à pasta para poderes usar as extensões. No canto inferior esquerdo, verás uma caixa colorida que diz algo como 'Modo Restringido'. Clicka na caixa, e seleciona esta opção:
+
+<p align="center"> <img src="imagens/vscode-trust.png" width="450"> </p>
+
+Podes fechar o pop-up, está quase! Agora, na barra da esquerda, clicka no ícone dos ficheiros, e, da lista, carrega com o botão esquerdo no `modelo-de-relatorio.tex`. Depois, com o botão direito, clicka no PDF, e clicka na opção de abrir ao lado. Deverá abrir o teu PDF, ou pedir para selecionares o leitor, que deve ser o vscode-pdf. Por último, clicka no espaço vazio ao lado do separador do ficheiro `.tex`, e clicka em 'Novo Terminal':
+
+<p align="center"> <img src="imagens/vscode-terminal.png" width="450"> </p>
+
+Daqui, podes escrever o comando de compilacão (`python make.py ...`) e trabalhar no teu relatório. Deverás ter um editor com mais ou menos esta aparência:
+
+<p align="center"> <img src="imagens/vscode-editor.png" width="650"> </p>
+
+Parabéns, concluiste o tutorial! Abre a barra de ficheiros para editar os outros ficheiros da pasta, e lembra-te de gravar as tuas edições com `Ctrl + S`.
 
 
 <br>
