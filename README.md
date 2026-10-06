@@ -210,7 +210,7 @@ A configuração do ambiente de edição é bastante básica: instala-se o edito
 
 Vai à página de download do VSCode (<https://code.visualstudio.com/Download>) e clicka na opção 'x64' em '.tar.gz':
 
-<p align="center"> <img src="imagens/vscode_ficheiro_linux.png" width="450"> </p>
+<p align="center"> <img src="imagens/vscode_ficheiro_linux.png" width="300"> </p>
 
 Extrai o ficheiro descarregado, e abre o terminal na pasta extraída ('VSCode-linux-x64'). Copia, para dentro dessa pasta, o ficheiro [com.microsoft.VSCode.desktop](./com.microsoft.VSCode.desktop), que poderás descarregar diretamente do GitHub para lá. Depois, executa este comando no terminal (dentro da pasta 'VSCode...'):
 
@@ -224,7 +224,7 @@ Quando terminar, o teu computador reconhecerá o VS Code como uma aplicação, q
 
 Dirige-te a <https://code.visualstudio.com/Download> e clicka na opção 'x64' do 'User Installer' para Windows:
 
-<p align="center"> <img src="imagens/vscode_ficheiro_win64.png" width="450"> </p>
+<p align="center"> <img src="imagens/vscode_ficheiro_win64.png" width="300"> </p>
 
 Isto descaregarrá um ficheiro executável. Abre-o, e segue as instruções. Quando estiver instalado, abre o programa, e afixa-o na barra de taréfas por conveniência.
 
@@ -232,7 +232,7 @@ Isto descaregarrá um ficheiro executável. Abre-o, e segue as instruções. Qua
 
 Fecha os pop-ups que abrirão inicialmente, e a janela do 'Chat' à direita. Terás um ecrã mais ou menos assim:
 
-<p align="center"> <img src="imagens/vscode-home.png" width="650"> </p>
+<p align="center"> <img src="imagens/vscode-home.png" width="750"> </p>
 
 A seguir, instala duas extensões: clicka no botão das quatro caixas, no canto superior esquerdo, e usa a barra de pesquisa para procurar as extensões:
 
@@ -241,19 +241,19 @@ A seguir, instala duas extensões: clicka no botão das quatro caixas, no canto 
 
 Tendo escrito tudo, clicka em 'Instalar', na caixa da extensão:
 
-<p align="center"> <img src="imagens/vscode-ext.png" width="450"> </p>
+<p align="center"> <img src="imagens/vscode-ext.png" width="350"> </p>
 
 Confirma que confias no desenvolvedor das duas extensões. No final, deverás ter uma página de extensões com esta aparência:
 
-<p align="center"> <img src="imagens/vscode-ext2.png" width="550"> </p>
+<p align="center"> <img src="imagens/vscode-ext2.png" width="350"> </p>
 
 Podes fechar a aba das extensões como a abriste. Agora, abre a pasta do relatório base pelo menu 'Ficheiro' em cima:
 
-<p align="center"> <img src="imagens/vscode-folder.png" width="450"> </p>
+<p align="center"> <img src="imagens/vscode-folder.png" width="350"> </p>
 
 Terás de dar permissões próprias à pasta para poderes usar as extensões. No canto inferior esquerdo, verás uma caixa colorida que diz algo como 'Modo Restringido'. Clicka na caixa, e seleciona esta opção:
 
-<p align="center"> <img src="imagens/vscode-trust.png" width="450"> </p>
+<p align="center"> <img src="imagens/vscode-trust.png" width="350"> </p>
 
 Podes fechar o pop-up, está quase! Agora, na barra da esquerda, clicka no ícone dos ficheiros, e, da lista, carrega com o botão esquerdo no `modelo-de-relatorio.tex`. Depois, com o botão direito, clicka no PDF, e clicka na opção de abrir ao lado. Deverá abrir o teu PDF, ou pedir para selecionares o leitor, que deve ser o vscode-pdf. Por último, clicka no espaço vazio ao lado do separador do ficheiro `.tex`, e clicka em 'Novo Terminal':
 
@@ -261,7 +261,7 @@ Podes fechar o pop-up, está quase! Agora, na barra da esquerda, clicka no ícon
 
 Daqui, podes escrever o comando de compilacão (`python make.py ...`) e trabalhar no teu relatório. Deverás ter um editor com mais ou menos esta aparência:
 
-<p align="center"> <img src="imagens/vscode-editor.png" width="650"> </p>
+<p align="center"> <img src="imagens/vscode-editor.png" width="850"> </p>
 
 Parabéns, concluiste o tutorial! Abre a barra de ficheiros para editar os outros ficheiros da pasta, e lembra-te de gravar as tuas edições com `Ctrl + S`.
 
