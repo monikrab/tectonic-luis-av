@@ -1,11 +1,12 @@
 
 <h1 align="center">Tutorial de LaTeX com Tectonic</h1>
-<h2 align="center">Física — 12º Ano</h2>
 
 
 ### 1. Fundamentos
 
-Para conseguries escrever relatórios sobre os trabalhos que farás na disciplina, o professor está a mandar-te instalar uma coisa de que provavelmente nunca ouviste falar, chamado Latex (estilizado como LaTeX; lê-se 'lateq', porque o X é um χ (qui) grego)—porquê? *Não posso só escrever os meus relatórios no o Word ou no Google Docs?*
+Para escreveres relatórios sobre trabalhos que elaborarás, estão a mandar-te instalar uma coisa de que provavelmente nunca ouviste falar, chamada "Latex"<a href="#note1"><sup>1</sup></a>, porquê? *Não posso só escrever os meus relatórios no o Word ou no Google Docs?*
+
+<a id="note1"></a>*1.* Estilizado como LaTeX; lê-se 'lateq', porque o X é um χ (qui) grego)
 
 Teoricamente... podes. Contudo, isto não é tão boa ideia como poderás imaginar. Esta imagem explica a diferença entre estes dois tipos de aplicações bastante bem:
 
@@ -123,7 +124,7 @@ Isto resulta no [seguinte documento](imagens/demo_latex.pdf):
 
 ### 3. Está bem, está bem, convenceste-me. Como é que instalo isto?
 
-Usarei o meu método preferido para instalar, porque existem várias, e porque acho que há uma alternativa melhor ao método do professor, se estiveres disposto a aprender um pouco sobre como isto tudo funciona. **Aviso**: Não poderei ajudar sempre que tiveres um problema, contudo, se os tiveres, muito provavelmente são por causa do *teu código* e não ao meu método de instalação. O meu método funciona com [quase](https://github.com/tectonic-typesetting/tectonic/issues/1086#issuecomment-2364793487) tudo, e se o professor pedir algo incompatível com ele, adicionarei uma solução neste site. 
+Ensinarei o meu método preferido para instalar, porque existem vários, e porque acho que há uma alternativa melhor aos métodos tradicionais, se estiveres disposto a aprender um pouco sobre como isto tudo funciona. **Aviso**: Não poderei ajudar sempre que tiveres um problema, contudo, se tiveres, muito provavelmente são por causa do *teu código* e não ao meu método de instalação. O meu método funciona com [quase](https://github.com/tectonic-typesetting/tectonic/issues/1086#issuecomment-2364793487) tudo, e se tiveres de fazer algo incompatível com ele, adicionarei uma solução neste site. 
 
 Quanto à instalação, depende. **Se estiveres no Linux** (Manjaro ou CachyOS), (que, já agora, eu <ins>recomendo usares</ins> se estiveres disposto a fazer outro pequeno esforço), abre o teu terminal e executa o comando
 
@@ -268,7 +269,7 @@ Parabéns, concluiste o tutorial! Abre a barra de ficheiros para editar os outro
 
 <br>
 <br>
-<h2 align="center">Para o professor</h2>
+<h2 align="center">Extras</h2>
 
 ### CONFLITOS DO PREÂMBULO COM O TECTONIC
 
