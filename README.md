@@ -6,13 +6,13 @@
 
 Para escreveres relatórios sobre trabalhos que elaborarás, estão a mandar-te instalar uma coisa de que provavelmente nunca ouviste falar, chamada "Latex"<a href="#note1"><sup>1</sup></a>, porquê? *Não posso só escrever os meus relatórios no o Word ou no Google Docs?*
 
-<a id="note1"></a>*1.* Estilizado como LaTeX; lê-se 'lateq', porque o X é um χ (qui) grego)
-
 Teoricamente... podes. Contudo, isto não é tão boa ideia como poderás imaginar. Esta imagem explica a diferença entre estes dois tipos de aplicações bastante bem:
 
 <p align="center"><img src="imagens/word_vs_latex.png" width="750"></p>
 
 Ou seja, se tentasses escrever os relatórios num processador de texto normal (como o Word), provavelmente demorarias mais tempo, o resultado ficaria menos visualmente apelativo, e (bastante) pior formatado.
+
+<a id="note1"></a>(*1. Estilizado como LaTeX; lê-se 'lateq', porque o X é um χ (qui) grego*)
 
 
 ### 2. Mas o que faz o LaTeX? Como posso fazer um documento?
